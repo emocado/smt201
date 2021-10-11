@@ -1,0 +1,34 @@
+---
+title: "Welcome to SMT201 G1T11"
+description: |
+  Welcome to our new blog, SMT201 G1T11. We hope you enjoy 
+  reading what we have to say!
+author:
+  - name: Lee Wei Khiang
+    url: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+    affiliation: School of Computing and Information Systems, Singapore Management University
+    affiliation_url: https://scis.smu.edu.sg/
+  - name: Richie Chua
+    url: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+    affiliation: School of Computing and Information Systems, Singapore Management University
+    affiliation_url: https://scis.smu.edu.sg/
+  - name: Chloe Khoo
+    url: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+    affiliation: School of Computing and Information Systems, Singapore Management University
+    affiliation_url: https://scis.smu.edu.sg/
+date: 10-11-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Learn more about creating blogs with Distill at:
+# https://rstudio.github.io/distill/blog.html
+
+```
+
+
+

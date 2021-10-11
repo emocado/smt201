@@ -1,0 +1,27 @@
+[
+  {
+    "path": "posts/welcome/",
+    "title": "Welcome to SMT201 G1T11",
+    "description": "Welcome to our new blog, SMT201 G1T11. We hope you enjoy \nreading what we have to say!",
+    "author": [
+      {
+        "name": "Lee Wei Khiang",
+        "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      },
+      {
+        "name": "Richie Chua",
+        "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      },
+      {
+        "name": "Chloe Khoo",
+        "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      }
+    ],
+    "date": "2021-10-11",
+    "categories": [],
+    "contents": "\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2021-10-11T21:42:04+08:00",
+    "input_file": "welcome.knit.md"
+  }
+]
