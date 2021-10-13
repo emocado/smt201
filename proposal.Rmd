@@ -10,25 +10,89 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 # 1.0 Motivation of the project
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac lobortis eros. Vestibulum lacinia placerat congue. Morbi sed venenatis quam. In et aliquet nulla, a fringilla lacus. In rutrum pharetra massa, ac rhoncus mauris consectetur sed. Aenean vitae massa quam. Curabitur fermentum fringilla nunc, vitae dignissim nisi faucibus luctus. Fusce aliquam, lectus et accumsan posuere, diam massa fringilla elit, non egestas erat dolor et dui. Duis pulvinar consectetur tortor in mollis. In id felis non elit pharetra varius at eu tortor. Nullam fermentum ac ex vitae semper. In non dui id diam accumsan faucibus. Mauris placerat justo at pretium interdum.
+Indonesia has planned to relocate their capital from Jakarta to  Kalimantan on the island of Borneo in response to the considerable sociological issues, pollution, traffic, climate change risks, and political influences.
+
+This move is estimated to cost nearly $33 billion (US), thus it is imperative to evaluate the site for relocation is suitable and sustainable.
 
 # 2.0 Project objective
 
-Aliquam vel tincidunt nisl. Etiam non congue sapien. Morbi tellus erat, sagittis semper dictum eget, pellentesque vel arcu. Fusce vel mi eget quam porttitor dictum. Donec dignissim nisl orci, sed aliquet lacus mollis ac. Nulla at sollicitudin tortor, eget lacinia sapien. Praesent condimentum augue vel eros pellentesque, a gravida mauris bibendum. Nulla ornare suscipit eros in iaculis. Nullam lacus ex, scelerisque eu lobortis sed, gravida id quam. Phasellus arcu tortor, molestie eget sapien eget, efficitur placerat odio. Quisque efficitur, eros in volutpat laoreet, dolor odio lacinia est, a tincidunt justo lectus eu tellus. Donec consectetur et quam at convallis. Nunc mi enim, lacinia vitae diam at, rhoncus sodales justo. Mauris quis auctor arcu. Vestibulum quis magna libero.
+## objective 1
+The project aims to analyse **Kutai Kartanegara Regency** and **Penajam North Paser Regency** in East Kalimantan in terms of the following:
+
+- Population and demographic
+- Economic and Businesses
+- Transport and Communication
+- Infrastructure
+- Environment and Hazard
+
+## objective 2
+
+## study Area
+- **All sub-districts** and **district** of **Kota Balipapan, Kota Samarinda**.
+
+- selected districts and sub-districts of **North Penajam Paser**:
+  - Babulu
+  - Penajam
+  - Sepaku and Waru
+
+- selected districts and sub-districts **Kutai Kartanegara**:
+  - Anggana
+  - Loa Janan
+  - Loa Kulu
+  - Marang Kayu
+  - Muara Jawa
+  - Samboja
+  - Sanga Sanga
+  - Sebulu Tenaggarong
+  - Tenggarong Seberang
+
+We will do a **site suitability analysis** of the study area above whereby the most suitable site would be recommended for the relocation.
 
 # 3.0 Data
 
-Curabitur tristique velit a urna aliquam convallis. Quisque quis eleifend enim. Aliquam pretium diam nibh, ut ullamcorper felis sodales ac. Etiam ornare in ligula ac pharetra. Mauris pretium tincidunt tortor. Nulla sit amet sem orci. Nam turpis justo, fermentum in congue vitae, lacinia eu eros. Proin molestie nunc et est feugiat, in mollis risus cursus.
++ [Batas Desa & Data Kependudukan Tahun 2019 Seluruh Indonesia](https://www.indonesia-geospasial.com/2020/04/download-shapefile-shp-batas-desa.html).  This data set provides comprehensive population data at the sub-district level.  In Indonesia local language, they are known as **kota** (i.e. urban sub-district) and **desa** (i.e. rural sub-district).  You are required to download data set for Provinsi Kalimantan Timur (i.e. East Kalimantan Province).
+
++ [Rupa Bumi Iindonesia (RBI) Provinsi Kalimantan Timur Perwilayah (Kabupaten/Kota)](https://www.indonesia-geospasial.com/2020/01/shp-rbi-provinsi-kalimantan-timur.html). The term rupabumi means topographic.  This data repository provides a coprehensive collection of topographical data layers of East Kalimantan. You are required to download data of Kota Balikpapan, Kota Samarinda, Penajam Paser Utara and Kutai Kartanegara.
+
++ [DEM SRTM 30m](https://www.indonesia-geospasial.com/2020/01/download-dem-srtm-30-meter-se-indonesia.html), digital elevation model at 30m resolution.
+
++ [Geological data](https://www.indonesia-geospasial.com/2020/03/download-data-shapefile-shp-geologi-se.html) layer.
+
++ [Forest fire hot spot data](https://www.indonesia-geospasial.com/2020/04/shapefile-shp-titik-api-hotspot.html). This repository provides several years of forest hot spots data.
+
++ [Buildings and Settlements](https://www.indonesia-geospasial.com/2020/12/download-shp-pemukiman-detail-seluruh.html).
 
 # 4.0 Scope of work
 
-Nunc malesuada quam massa, et luctus sem sagittis sit amet. Praesent nec ex nec dolor fermentum vulputate. Donec eget condimentum nisi. Etiam sollicitudin ac urna sed sollicitudin. Phasellus hendrerit fermentum aliquet. Nam tempus turpis at sodales tempus. Phasellus nec purus suscipit, molestie ipsum vitae, aliquam est. Ut sodales metus quis eleifend laoreet. Pellentesque venenatis dolor et nisl tristique, sed tincidunt tellus sollicitudin. Donec nunc neque, pharetra et facilisis ut, vulputate sed felis. Aliquam erat volutpat. Aliquam erat volutpat. Duis venenatis nisl sem, ut eleifend tellus tempor eu. Morbi nisi arcu, tincidunt vel consequat a, suscipit in nulla.
+- Project Timeline Setup
+- Project Website Creation
+- Preliminary Research
+  - Data Extraction
+  - Data Cleaning
+  - Preliminary Analysis
+- Project Proposal
+
+- GIS Analysis Model Formulation
+  - Economic & Business Analysis
+  - Environment & Hazard Analysis
+  - Infrastructure Analysis
+  - Population & Demographic Analysis
+  - Transport & Communication Analysis
+- Write Up report of survey (Task 1)
+
+- Synthesis: Analysis for Site Suitability
+  - Site Suitability Report (Task 2)
+- Poster Preparation
+- Project website finalization
+
 
 # 5.0 Project schedule including a Gannt chart
 
-Donec vitae eros ut erat ultrices malesuada. Aenean congue id justo et efficitur. Nullam eleifend faucibus orci non viverra. Nullam ut odio nec urna semper maximus. Ut elementum nibh a ligula dapibus, sed placerat justo commodo. Integer vitae mollis sem. Maecenas pellentesque neque sem, vulputate fermentum felis blandit et. Nam pellentesque id dolor dignissim posuere. Nunc congue nunc vitae lacus congue, quis consequat felis imperdiet. Cras ac urna quis turpis euismod sodales. Duis ac metus magna.
+```{r}
+knitr::include_graphics("img/project_timeline.png")
+```

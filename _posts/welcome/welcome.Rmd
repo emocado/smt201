@@ -5,15 +5,15 @@ description: |
   reading what we have to say!
 author:
   - name: Lee Wei Khiang
-    url: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+    url: https://www.linkedin.com/in/wei-khiang-lee/
     affiliation: School of Computing and Information Systems, Singapore Management University
     affiliation_url: https://scis.smu.edu.sg/
   - name: Richie Chua
-    url: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+    url: https://www.linkedin.com/in/richiechua/
     affiliation: School of Computing and Information Systems, Singapore Management University
     affiliation_url: https://scis.smu.edu.sg/
   - name: Chloe Khoo
-    url: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+    url: https://www.linkedin.com/in/chloe-khoo/
     affiliation: School of Computing and Information Systems, Singapore Management University
     affiliation_url: https://scis.smu.edu.sg/
 date: 10-11-2021
