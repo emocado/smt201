@@ -50,6 +50,7 @@ The project aims to analyse **Kutai Kartanegara Regency** and **Penajam North Pa
   - Sanga Sanga
   - Sebulu Tenaggarong
   - Tenggarong Seberang
+  - Muara Badak
 
 We will do a **site suitability analysis** of the study area above whereby the most suitable site would be recommended for the relocation.
 
