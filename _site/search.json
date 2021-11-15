@@ -48,8 +48,8 @@
       "description": "Site Selection Report\n",
       "author": [],
       "date": "`r Sys.Date()`",
-      "contents": "\r\n\r\nContents\r\nHello World\r\n\r\nHello World\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-10-13T22:07:32+08:00"
+      "contents": "\r\n\r\nContents\r\nSite Suitability\r\n\r\nSite Suitability\r\n\r\n\r\n\r\nClick here to view our site suitability\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-11-15T17:49:21+08:00"
     }
   ],
   "collections": ["posts/posts.json"]

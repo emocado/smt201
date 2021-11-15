@@ -10,6 +10,10 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
-# Hello World
+# Site Suitability
+```{r}
+knitr::include_graphics("img/image15.png")
+```
+<a href="https://smt201-g1t11-site.netlify.app" target="_blank">Click here to view our site suitability</a>
