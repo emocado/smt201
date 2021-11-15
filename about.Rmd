@@ -7,3 +7,9 @@ description: |
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+
+Our Github repo:
+[Github](https://github.com/emocado/smt201)
+
+Our Report:
+[G1T11 Report](https://docs.google.com/document/d/1lxkAXrnp_0S8d9ZUaASS8VvPfwavzNMWmezzmD3KNeo/edit?usp=sharing)

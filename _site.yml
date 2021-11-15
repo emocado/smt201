@@ -20,4 +20,6 @@ navbar:
       href: index.html
     - text: "About"
       href: about.html
+    - image: img/github.png
+      href: https://github.com/emocado/smt201
 output: distill::distill_article
