@@ -2162,12 +2162,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h1 id="extracting-and-preparing-layer">1.0 Extracting and preparing layer</h1>
 <h2 id="study-area">1.1 Study Area</h2>
 <p>Bring in BATAS_DESA_DESEMBER_2019_DUKCAPIL_KALIMANTAN_TIMUR.shp into QGIS.</p>
-<p>From the Attributes toolbar, select Attributes Table Click Select features using an expression Enter the following code</p>
+<ul>
+<li>From the Attributes toolbar, select Attributes Table</li>
+<li>Click Select features using an expression</li>
+<li>Enter the following code</li>
+</ul>
 <p>“KAB_KOTA” in ( ‘KOTA BALIKPAPAN’ , ‘KOTA SAMARINDA’ ) or “KECAMATAN” in ( ‘ANGGANA’ , ‘BABULU’ , ‘LOA JANAN’ , ‘LOA KULU’ , ‘MARANG KAYU’ , ‘MUARA JAWA’ , ‘PENAJAM’ , ‘SAMBOJA’ , ‘SANGA SANGA’ , ‘SEBULU’ , ‘SEPAKU’ , ‘TENGGARONG’ , ‘TENGGARONG SEBERANG’ , ‘WARU’ , ‘MUARA BADAK’ )</p>
-<p>Click on Select Features Click on Close Right click on the population layer in the Layers toolbar Select Export -&gt; Save selected features as Set the Format to GeoPackage from the drop down Set the layer name to study_area Set the CRS to EPSG:23845 Click Ok</p>
+<ul>
+<li>Click on Select Features</li>
+<li>Click on Close</li>
+<li>Right click on the population layer in the Layers toolbar</li>
+<li>Select Export -&gt; Save selected features as</li>
+<li>Set the Format to GeoPackage from the drop down</li>
+<li>Set the layer name to study_area</li>
+<li>Set the CRS to EPSG:23845</li>
+<li>Click Ok</li>
+</ul>
 <h2 id="road-layer">1.2 Road layer</h2>
 <p>Bring in gis_osm_roads_free_1.shp into QGIS</p>
-<p>From the menu bar, select Vector -&gt; Research tools -&gt; Select by Location. For Select feature from select gis_osm_roads_free_1.shp from the drop down list. For Where the features (geometric predicate), check intersect check box. For By comparing to the features from, select study_area from the drop down list. Click the Advanced options beside study_area and choose Do not Filter (Better Performance) for Invalid features filtering</p>
+<ul>
+<li>From the menu bar, select Vector -&gt; Research tools -&gt; Select by Location.</li>
+<li>For Select feature from select gis_osm_roads_free_1.shp from the drop down list.</li>
+<li>For Where the features (geometric predicate), check intersect check box.</li>
+<li>For By comparing to the features from, select study_area from the drop down list.</li>
+<li>Click the Advanced options beside study_area and choose Do not Filter (Better Performance) for Invalid features filtering</li>
+</ul>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image35.png" width="418" /></p>
 </div>
@@ -2185,108 +2204,209 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>Using the steps in 1.1.1, select gis_osm_buildings_a_free_1.shp to study_area and save it into a geopackage as building</p>
 <h2 id="transport-layer">1.4 Transport layer</h2>
 <p>Bring gis_osm_traffic_a_free_1.shp and gis_osm_transport_a_free_1.shp into QGIS</p>
-<p>From the menu bar, select Vector -&gt; Data Management Tools -&gt; Merge Vector Layers. For Input layers select gis_osm_traffic_a_free_1.shp and gis_osm_transport_a_free_1.shp. For Destination CRS, select EPSG:23845 - DGN95 / Indonesia TM-3 zone 54.1. Click Run</p>
+<ul>
+<li>From the menu bar, select Vector -&gt; Data Management Tools -&gt; Merge Vector Layers.</li>
+<li>For Input layers select gis_osm_traffic_a_free_1.shp and gis_osm_transport_a_free_1.shp.</li>
+<li>For Destination CRS, select EPSG:23845 - DGN95 / Indonesia TM-3 zone 54.1. Click Run</li>
+</ul>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image28.png" width="364" /></p>
 </div>
-<p>Open attribute table of merged From the menu bar, click select by expression Key in the expression as shown below</p>
+<ul>
+<li>Open attribute table of merged</li>
+<li>From the menu bar, click select by expression</li>
+<li>Key in the expression as shown below</li>
+</ul>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image22.png" width="172" /></p>
 </div>
-<p>Click select features Save selected features into a geopackage and name it transport</p>
+<ul>
+<li>Click select features</li>
+<li>Save selected features into a geopackage and name it transport</li>
+</ul>
 <p>Using the steps in 1.1.1, select transport layer into study_area layer and save it into a geopackage as transport, overwriting the transport layer</p>
-<p>From the menu bar, select Vector -&gt; Geometry Tools -&gt; Centroids. For Input layers select transport from the drop down list. Leave the rest of the fields as default Click Run Save the temporary Centroids into a geopackage and name it transport_centroid</p>
+<ul>
+<li>From the menu bar, select Vector -&gt; Geometry Tools -&gt; Centroids.</li>
+<li>For Input layers select transport from the drop down list.</li>
+<li>Leave the rest of the fields as default</li>
+<li>Click Run</li>
+<li>Save the temporary Centroids into a geopackage and name it transport_centroid</li>
+</ul>
 <p>From the menu bar, select Select features by freehand and manually select transport_centroid features that are within the study area.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image54.png" width="597" /></p>
 </div>
-<p>Open attribute table of transport_centroid From the menu bar, Toggle editing mode and select Invert selection Delete selected features</p>
+<ul>
+<li>Open attribute table of transport_centroid</li>
+<li>From the menu bar, Toggle editing mode and select Invert selection</li>
+<li>Delete selected features</li>
+</ul>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image30.png" width="956" /></p>
 </div>
 <h2 id="hotspot-layer">1.5 Hotspot layer</h2>
 <p>Open Titik Api Hotspot se-Indonesia Tahun [Year] into QGIS, where [Year] is 2014 - 2020.</p>
-<p>Select the hospots that fall within the study area. From the plugins toolbar, click Select by location For Input, select Titik Api Hotspot se-indonesia Tahun [Year] Intersect should be selected For By comparing to the features from, select study_area. Under advanced options , select Do not Filter (Better Performance) Click Run</p>
-<p>Relevant hotspots will be selected. Select Export -&gt; Save selected features as Set the Format to GeoPackage from the drop down Set the layer name to kalimantan Set the CRS to EPSG:23845 For 2014, 2015 &amp; 2017, select Points for Geometry type and untick Include z-dimension Click Ok Save the selected points into a geopackage and name it kalimantan_[Year]</p>
+<p>Select the hospots that fall within the study area. - From the plugins toolbar, click Select by location - For Input, select Titik Api Hotspot se-indonesia Tahun [Year] - Intersect should be selected - For By comparing to the features from, select study_area. Under advanced options , select Do not Filter (Better Performance) - Click Run</p>
+<p>Relevant hotspots will be selected. - Select Export -&gt; Save selected features as - Set the Format to GeoPackage from the drop down - Set the layer name to kalimantan - Set the CRS to EPSG:23845 - For 2014, 2015 &amp; 2017, select Points for Geometry type and untick Include z-dimension - Click Ok - Save the selected points into a geopackage and name it kalimantan_[Year]</p>
 <p>Repeat this process for all the year.</p>
-<p>From the Menu Toolbar, select Vector -&gt; Data Management Tools -&gt; Merge Vector Layer For Input, select all 6 hotspot layers For Destination CRS, select EPSG: 23845 Click Run Click Close</p>
-<p>A temporary Merged layer should be added to your map. Select Export -&gt; Save features as Set the Format to GeoPackage from the drop down Set the layer name to kalimantan Set the CRS to EPSG:23845 Under Select fields, deselect fid Click Run</p>
+<ul>
+<li>From the Menu Toolbar, select Vector -&gt; Data Management Tools -&gt; Merge Vector Layer</li>
+<li>For Input, select all 6 hotspot layers</li>
+<li>For Destination CRS, select EPSG: 23845</li>
+<li>Click Run</li>
+<li>Click Close</li>
+</ul>
+<p>A temporary Merged layer should be added to your map. - Select Export -&gt; Save features as - Set the Format to GeoPackage from the drop down - Set the layer name to kalimantan - Set the CRS to EPSG:23845 - Under Select fields, deselect fid - Click Run</p>
 <h2 id="healthcare-layer">1.6 Healthcare layer</h2>
-<p>Import healthcare facilities dataset to QGIS From the Menu Toolbar, go to Vector -&gt; Geoprocessing tools -&gt; Clip Set the Input Layer as healthcare facilities dataset Set the Overlay layer as population. Select advanced options for Input layer. Select Do Not Filter Click OK Save the temporary Clipped layer as healthcare</p>
+<ul>
+<li>Import healthcare facilities dataset to QGIS</li>
+<li>From the Menu Toolbar, go to Vector -&gt; Geoprocessing tools -&gt; Clip</li>
+<li>Set the Input Layer as healthcare facilities dataset</li>
+<li>Set the Overlay layer as population. Select advanced options for Input layer. Select Do Not Filter</li>
+<li>Click OK</li>
+<li>Save the temporary Clipped layer as healthcare</li>
+</ul>
 <h2 id="forest-layer">1.7 Forest layer</h2>
-<p>Open Tuplah_Kalimantan_Timur_2019.shp</p>
-<p>Select the area that falls within the study area. From the plugins toolbar, click Select by location For Input, select Tuplah_Kalimantan_Timur_2019 Intersect should be selected For By comparing to the features from, select study_area. Under advanced options , select Do not Filter (Better Performance) Click Run</p>
-<p>Select the relevant polygons that are related to forest. From the plugins toolbar, click Select by expression Type the following expression in the expression box: “Legenda” in ( ‘Hutan Lahan Kering Primer’ , ‘Hutan Lahan Kering Sekunder’ , ‘Hutan Mangrove Primer’ , ‘Hutan Mangrove Sekunder’ , ‘Hutan Rawa Primer’ , ‘Hutan Rawa Sekunder’ , ‘Hutan Tanaman’) Click Run Select Export -&gt; Save selected features as Save the layer in the geopackage as forest</p>
+<ul>
+<li>Open Tuplah_Kalimantan_Timur_2019.shp</li>
+</ul>
+<p>Select the area that falls within the study area. - From the plugins toolbar, click Select by location - For Input, select Tuplah_Kalimantan_Timur_2019 - Intersect should be selected - For By comparing to the features from, select study_area. Under advanced options , select Do not Filter (Better Performance) - Click Run</p>
+<p>Select the relevant polygons that are related to forest. - From the plugins toolbar, click Select by expression - Type the following expression in the expression box: - “Legenda” in ( ‘Hutan Lahan Kering Primer’ , ‘Hutan Lahan Kering Sekunder’ , ‘Hutan Mangrove Primer’ , ‘Hutan Mangrove Sekunder’ , ‘Hutan Rawa Primer’ , ‘Hutan Rawa Sekunder’ , ‘Hutan Tanaman’) - Click Run - Select Export -&gt; Save selected features as Save the layer in the geopackage as forest</p>
 <h2 id="agriculture-layer">1.8 Agriculture layer</h2>
-<p>Open Tuplah_Kalimantan_Timur_2019.shp</p>
-<p>Select the area that falls within the study area. From the plugins toolbar, click Select by location For Input, select Tuplah_Kalimantan_Timur_2019 Intersect should be selected For By comparing to the features from, select study_area. Under advanced options , select Do not Filter (Better Performance) Click Run</p>
-<p>Select the relevant polygons that are related to agriculture. From the plugins toolbar, click Select by expression Type the following expression in the expression box: “Legenda” in ( ‘Pertanian Lahan Kering’ , ‘Pertanian Lahan Kering Campur’ , ‘Sawah’ , ‘Perkebunan’ ) Click Run Select Export -&gt; Save selected features as Save the layer in the geopackage as agriculture</p>
+<ul>
+<li>Open Tuplah_Kalimantan_Timur_2019.shp</li>
+</ul>
+<p>Select the area that falls within the study area. - From the plugins toolbar, click Select by location - For Input, select Tuplah_Kalimantan_Timur_2019 - Intersect should be selected - For By comparing to the features from, select study_area. Under advanced options , select Do not Filter (Better Performance) - Click Run</p>
+<p>Select the relevant polygons that are related to agriculture. - From the plugins toolbar, click Select by expression - Type the following expression in the expression box: - “Legenda” in ( ‘Pertanian Lahan Kering’ , ‘Pertanian Lahan Kering Campur’ , ‘Sawah’ , ‘Perkebunan’ ) - Click Run - Select Export -&gt; Save selected features as - Save the layer in the geopackage as agriculture</p>
 <h2 id="waterway-and-water-body-layers">1.9 Waterway and Water Body layers</h2>
-<p>Open gis_osm_water_a_free_1.shp</p>
-<p>Select the area that falls within the study area. From the plugins toolbar, click Select by location For Input, select gis_osm_water_a_free_1.shp Intersect should be selected For By comparing to the features from, select study_area. Under advanced options , select Do not Filter (Better Performance) Click Run Select Export -&gt; Save selected features as Save the layer in the geopackage as waterway</p>
-<p>Open gis_osm_waterways_free_1.shp</p>
-<p>Select the area that falls within the study area. From the plugins toolbar, click Select by location For Input, select gis_osm_waterways_free_1.shp Intersect should be selected For By comparing to the features from, select study_area. Under advanced options , select Do not Filter (Better Performance) Click Run Select Export -&gt; Save selected features as Save the layer in the geopackage as waterbody</p>
+<ul>
+<li>Open gis_osm_water_a_free_1.shp</li>
+</ul>
+<p>Select the area that falls within the study area. - From the plugins toolbar, click Select by location - For Input, select gis_osm_water_a_free_1.shp - Intersect should be selected - For By comparing to the features from, select study_area. Under advanced options , select Do not Filter (Better Performance) - Click Run - Select Export -&gt; Save selected features as - Save the layer in the geopackage as waterway</p>
+<ul>
+<li>Open gis_osm_waterways_free_1.shp</li>
+</ul>
+<p>Select the area that falls within the study area. - From the plugins toolbar, click Select by location - For Input, select gis_osm_waterways_free_1.shp - Intersect should be selected - For By comparing to the features from, select study_area. Under advanced options , select Do not Filter (Better Performance) - Click Run - Select Export -&gt; Save selected features as - Save the layer in the geopackage as waterbody</p>
 <h1 id="accessibility">2.0 Accessibility</h1>
-<p>Accessibility factor: &lt;=100m = 5, 100-200m = 4, 200-300m = 3, 300-500m = 2, &gt;500m = 1 from roads.</p>
 <h2 id="accessibility-to-roads">2.1 Accessibility to Roads</h2>
+<p>Accessibility factor: &lt;=100m = 5, 100-200m = 4, 200-300m = 3, 300-500m = 2, &gt;500m = 1 from roads.</p>
 <h3 id="creating-attribute-field-for-rasterizing">2.1.1 Creating attribute field for rasterizing</h3>
-<p>Before we can rasterize the roads layer, we need to add a control attribute field in the roads layer. At the Layers panel, click on the Roads layer to make it active. From the icon bar, click on the Open Attribute Table icon . The attribute table of the roads layer appears. From the menu bar of the roads layer attribute table, click on the Open field calculator icon. The Field Calculator dialog window appears. Keep Create a new field option checks. For Output field name, type POI_CODE. At the Expression pane, type 1. Your screen should look similar to the figure below.</p>
+<p>Before we can rasterize the roads layer, we need to add a control attribute field in the roads layer. - At the Layers panel, click on the Roads layer to make it active. - From the icon bar, click on the Open Attribute Table icon .</p>
+<p>The attribute table of the roads layer appears.</p>
+<ul>
+<li>From the menu bar of the roads layer attribute table, click on the Open field calculator icon.</li>
+</ul>
+<p>The Field Calculator dialog window appears.</p>
+<ul>
+<li>Keep Create a new field option checks.</li>
+<li>For Output field name, type POI_CODE.</li>
+<li>At the Expression pane, type 1.</li>
+</ul>
+<p>Your screen should look similar to the figure below.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image100.png" width="467" /></p>
 </div>
-<p>Click on the OK button to run the function. Notice that a new field called POI_CODE has been added into the attribute table of roads GIS layer. Also note that all the records are indicated with POI_CODE values equals to 1.</p>
+<ul>
+<li>Click on the OK button to run the function.</li>
+</ul>
+<p>Notice that a new field called POI_CODE has been added into the attribute table of roads GIS layer. Also note that all the records are indicated with POI_CODE values equals to 1.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image8.png" width="582" /></p>
 </div>
 <p>You are now ready to rasterize the roads layer. Save the editing before moving on.</p>
 <h3 id="rasterizing-roads-layer">2.1.2 Rasterizing roads layer</h3>
-<p>From the menu bar, select Raster -&gt; Conversion -&gt; Rasterize (Vector to Raster). The Raster (Vector to Raster) dialog window appears. For the Input layer, select Roads from the drop-down list. For Field to use for a burn-in value, select POI_CODE from the drop-down list. For Output raster size units, select Georeferenced units. Keep both horizontal and vertical resolutions at 5 (meaning 5m by 5m resolution). For Output extent, click on Calculate from Layer. Select study_area from the drop-down list. When you are ready, Click on the Run button. When the operation ends, the dialog window will display the operation log. Read the output display to ensure that the process has completed without any error. After confirming that there is no error. You can close the dialog window. Click on the Close button. Notice that a temporary layer called Rasterized has been added in the QGIS project.</p>
+<ul>
+<li>From the menu bar, select Raster -&gt; Conversion -&gt; Rasterize (Vector to Raster).</li>
+</ul>
+<p>The Raster (Vector to Raster) dialog window appears.</p>
+<ul>
+<li>For the Input layer, select Roads from the drop-down list.</li>
+<li>For Field to use for a burn-in value, select POI_CODE from the drop-down list.</li>
+<li>For Output raster size units, select Georeferenced units.</li>
+<li>Keep both horizontal and vertical resolutions at 5 (meaning 5m by 5m resolution).</li>
+<li>For Output extent, click on Calculate from Layer.</li>
+<li>Select study_area from the drop-down list.</li>
+</ul>
+<p>When you are ready, - Click on the Run button.</p>
+<p>When the operation ends, the dialog window will display the operation log. - Read the output display to ensure that the process has completed without any error.</p>
+<p>After confirming that there is no error. You can close the dialog window. - Click on the Close button.</p>
+<p>Notice that a temporary layer called Rasterized has been added in the QGIS project.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image33.png" width="339" /></p>
 </div>
 <p>Save the temporary layer into GeoPackage format. Call the newly exported layer raster_roads. Next, remove the temporary layer from QGIS.</p>
 <h3 id="working-with-proximity-function-of-qgis">2.1.3 Working with Proximity function of QGIS</h3>
-<p>Now, the Proximity operation of QGIS will be used to compute the proximity to roads layer. For the menu bar, select Raster -&gt; Analysis -&gt; Proximity (Raster Distance). The Proximity (Raster Distance) dialog window appears. For Input layer, select raster_roads from the drop-down list. For Distance units, select Georeferenced coordinates from the drop-down list. For Output data type, select Float32 from the drop-down list.Your screen should look similar to the screenshot below.</p>
+<p>Now, the Proximity operation of QGIS will be used to compute the proximity to roads layer.</p>
+<ul>
+<li>For the menu bar, select Raster -&gt; Analysis -&gt; Proximity (Raster Distance).</li>
+</ul>
+<p>The Proximity (Raster Distance) dialog window appears.</p>
+<ul>
+<li>For Input layer, select raster_roads from the drop-down list.</li>
+<li>For Distance units, select Georeferenced coordinates from the drop-down list.</li>
+<li>For Output data type, select Float32 from the drop-down list.Your screen should look similar to the screenshot below.</li>
+</ul>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image101.png" width="336" /></p>
 </div>
-<p>Click Run Your screen should look similar to the figure below.</p>
+<ul>
+<li>Click Run Your screen should look similar to the figure below.</li>
+</ul>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image40.png" width="304" /></p>
 </div>
-<p>A temporary layer called Proximity map is created and added in the QGIS project. The legend of Proximity map layer indicates that the furthest distance from the roads is 86038 metres. save the newly computed proximity map into GeoPackage format with a resolution of 5m x 5m. Call the layer prox_roads. Next, remove the Proximity map layer from QGIS.</p>
+<p>A temporary layer called Proximity map is created and added in the QGIS project. The legend of Proximity map layer indicates that the furthest distance from the roads is 86038 metres.</p>
+<p>save the newly computed proximity map into GeoPackage format with a resolution of 5m x 5m. Call the layer prox_roads. Next, remove the Proximity map layer from QGIS.</p>
 <h3 id="deriving-road-accessibility-factor-preference-layer">2.1.4 Deriving road accessibility factor preference layer</h3>
-<p>From the Processing Toolbox, search for Reclassify by Table, double-click on it.</p>
+<ul>
+<li>From the Processing Toolbox, search for Reclassify by Table, double-click on it.</li>
+</ul>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image102.png" width="502" /></p>
 </div>
-<p>The dialog window of Reclassify by Table appears. For Raster Layer, select slope from the drop-down list. For the Reclassification table, click on the icon. The dialog window of the Fixed table appears. Enter the value similar to the screenshot below.</p>
+<p>The dialog window of Reclassify by Table appears. - For Raster Layer, select slope from the drop-down list. - For the Reclassification table, click on the icon.</p>
+<p>The dialog window of the Fixed table appears. - Enter the value similar to the screenshot below.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image53.png" width="360" /></p>
 </div>
-<p>Reminder: Click on Add Row button when you want to add a new row. Click on the OK button when you have completed the entry. You will go back to the dialog window of Reclassify by Table. For Range boundaries, select the option similar to the screenshot below.</p>
+<p>Reminder: Click on Add Row button when you want to add a new row. - Click on the OK button when you have completed the entry.</p>
+<p>You will go back to the dialog window of Reclassify by Table. - For Range boundaries, select the option similar to the screenshot below.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image103.png" width="564" /></p>
 </div>
-<p>For Output data type, select Float32 from the drop-down list. Lastly, click on the Run button to run the process. Note: Pay attention to the Using classes section of the report log. This is the actual reclassification scheme defined using Fixed table and Range boundaries functions of Reclassify by Table of QGIS.</p>
+<ul>
+<li>For Output data type, select Float32 from the drop-down list.</li>
+<li>Lastly, click on the Run button to run the process.</li>
+</ul>
+<p>Note: Pay attention to the Using classes section of the report log. This is the actual reclassification scheme defined using Fixed table and Range boundaries functions of Reclassify by Table of QGIS.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image1.png" width="362" /></p>
 </div>
-<p>When you are done with reviewing the report log, click on the Close button to close the dialog window of Reclassify by Table. Notice that a new temporary raster layer will be added on the view window of QGIS as shown in the screenshot below.</p>
+<p>When you are done with reviewing the report log, click on the Close button to close the dialog window of Reclassify by Table.</p>
+<p>Notice that a new temporary raster layer will be added on the view window of QGIS as shown in the screenshot below.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image58.png" width="620" /></p>
 </div>
-<p>Using the steps you had learned in the earlier section, save the temporary raster layer into Geopackage format. Name the data layer as rank_roads. Then, remove the temporary raster layer from QGIS. On the rank_roads layer click properties -&gt; Symbology For Render type select Palatted/Unique values from the drop down For Color ramp select blues and invert Colour ramp. Click Classify Change the label according to the screenshot below</p>
+<p>Using the steps you had learned in the earlier section, save the temporary raster layer into Geopackage format. Name the data layer as rank_roads. Then, remove the temporary raster layer from QGIS.</p>
+<ul>
+<li>On the rank_roads layer click properties -&gt; Symbology</li>
+<li>For Render type select Palatted/Unique values from the drop down</li>
+<li>For Color ramp select blues and invert Colour ramp.</li>
+<li>Click Classify</li>
+<li>Change the label according to the screenshot below</li>
+</ul>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image56.png" width="498" /></p>
 </div>
-<p>Click Apply and then OK</p>
+<ul>
+<li>Click Apply and then OK</li>
+</ul>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image13.png" width="736" /></p>
 </div>
 <h2 id="health">2.2 Health</h2>
 <h3 id="deriving-health-risk-factor-preference-layer">2.2.1 Deriving health risk factor preference layer</h3>
-<p>Using the steps in 2.1, Create a layer for health risk factor. Health risk factor: &lt;=100m = 1, 100-200m = 2, 200-300m = 3, 300-500m = 4, /&gt;500m = 5 away from population i.e. housing areas and offices.</p>
+<p>Using the steps in 2.1, Create a layer for health risk factor. - Health risk factor: - &lt;=100m = 1, - 100-200m = 2, - 200-300m = 3, - 300-500m = 4, - &gt;500m = 5 away from population i.e. housing areas and offices.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image17.png" width="368" /></p>
 </div>
@@ -2303,46 +2423,127 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p><img src="img/images/image20.png" width="738" /></p>
 </div>
 <h2 id="hotspot">2.3 Hotspot</h2>
-<p>Load the Hotspot shp files from the browser (Titik Api Hotspot se-Indonesia Tahun [Year]). Select the hospots that fall within the study area. This can be done through the Select by location tool. In the Select by location window: Select Titik Api Hotspot se-indonesia Tahun [Year] layer for the Select features from input. Intersect should be ticked. Select kalimantan_study_area as the input for By comparing to the features from. Under advanced options for By comparing the features from, select Do not Filter (Better Performance). Click Run. Export the selected points to kalimantan gpkg. Change CRS to EPSG: 23845 – DGN95 / Indonesia TM-3 zone 54.1. For 2014, 2015 &amp; 2017, select Points for Geometry type and untick Include z-dimension. Merge all the hotspot layers by using the Merge Vector Layer tool (Vector &gt; Data Management Tools &gt; Merge Vector Layer). Select all 6 hotspot layers as the input and select EPSG: 23845 – DGN95 / Indonesia TM-3 zone 54.1 as the Destination CRS. Export the temporary merge layer to kalimantan gpkg. Change CRS to EPSG: 23845 – DGN95 / Indonesia TM-3 zone 54.1. Untick fid under Select fields to export and their export options as a new unique fid would be generated which may overlap with the existing fid. From the Processing Toolbox, select Heatmap. In the Heatmap window</p>
+<ul>
+<li>Load the Hotspot shp files from the browser (Titik Api Hotspot se-Indonesia Tahun [Year]).</li>
+<li>Select the hospots that fall within the study area. This can be done through the Select by location tool. In the Select by location window:
+<ul>
+<li>Select Titik Api Hotspot se-indonesia Tahun [Year] layer for the Select features from input.</li>
+<li>Intersect should be ticked.</li>
+<li>Select kalimantan_study_area as the input for By comparing to the features from.</li>
+<li>Under advanced options for By comparing the features from, select Do not Filter (Better Performance).</li>
+<li>Click Run.</li>
+</ul></li>
+<li>Export the selected points to kalimantan gpkg. Change CRS to EPSG: 23845 – DGN95 / Indonesia TM-3 zone 54.1. For 2014, 2015 &amp; 2017, select Points for Geometry type and untick Include z-dimension.</li>
+<li>Merge all the hotspot layers by using the Merge Vector Layer tool (Vector &gt; Data Management Tools &gt; Merge Vector Layer). Select all 6 hotspot layers as the input and select EPSG: 23845 – DGN95 / Indonesia TM-3 zone 54.1 as the Destination CRS. Export the temporary merge layer to kalimantan gpkg. Change CRS to EPSG: 23845 – DGN95 / Indonesia TM-3 zone 54.1. Untick fid under Select fields to export and their export options as a new unique fid would be generated which may overlap with the existing fid.</li>
+<li>From the Processing Toolbox, select Heatmap. In the Heatmap window</li>
+</ul>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image61.png" width="274" /></p>
 </div>
-<p>Select hospot_merged as the point layer. Key in 10000 meters for Radius Run the window. The heat map should look like this</p>
+<ul>
+<li>Select hospot_merged as the point layer.</li>
+<li>Key in 10000 meters for Radius</li>
+<li>Run the window.</li>
+</ul>
+<p>The heat map should look like this</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image5.png" width="176" /></p>
 </div>
 <h2 id="education">2.4 Education</h2>
-<p>Load PEDIDIKAN_PT_50k.shp KOTA_BALIKPAPAN RBI, KOTASAMARINDA RBI, KUTAIKARTANEGARA RBI and PENAJAMPASERUTARA RBI into QGIS Merge the 4 layers together using the Merge Vector Layers tool [Vector &gt; Data Management Tools &gt; Merge Vector Layer]. In the Merge Vector Layers window: Select the 4 Pedidikan layers as the Input layers. Select EPSG: 23845 – DGN95 / Indonesia TM-3 zone 54.1 as the Destination CRS. Run the window. Delete duplicate points for the merged layers. Search for Delete Duplicate Geometries on the Geoprocessing Toolbox and open the tool. In the Delete Duplicate Geometries window: Select Merged as the Input layer/ Run the window. Export the Cleaned output layer into the geopackage as school. Change CRS to EPSG: 23845 – DGN95 / Indonesia TM-3 zone 54.1. Count the number of schools in each Desa. This can be done using the Count points in polygon tool [Vector &gt; Analysis &gt; Count points in polygon]. In the Count points in polygon window: Select the study area layer as the Polygon. Select school for Points. Under advanced options , select Do not Filter (Better Performance). Run the window. Export the Count output layer into the geopackage as school_count. Change CRS to EPSG: 23845 – DGN95 / Indonesia TM-3 zone 54.1. Create a choropleth map using the school_count layer. Double click on the school_count layer to open the Layer Properties window. Select Symbology. In the Symbology window: Change from Single Symbol to Graduated. Select NUMPOINTS as the value. Select Natural Breaks (Jenks) for Mode. Click on Classify. Click on Apply and Ok. The choropleth map should look like this:</p>
+<ul>
+<li>Load PEDIDIKAN_PT_50k.shp KOTA_BALIKPAPAN RBI, KOTASAMARINDA RBI, KUTAIKARTANEGARA RBI and PENAJAMPASERUTARA RBI into QGIS</li>
+<li>Merge the 4 layers together using the Merge Vector Layers tool [Vector &gt; Data Management Tools &gt; Merge Vector Layer]. In the Merge Vector Layers window:
+<ul>
+<li>Select the 4 Pedidikan layers as the Input layers.</li>
+<li>Select EPSG: 23845 – DGN95 / Indonesia TM-3 zone 54.1 as the Destination CRS.</li>
+<li>Run the window.</li>
+</ul></li>
+<li>Delete duplicate points for the merged layers. Search for Delete Duplicate Geometries on the Geoprocessing Toolbox and open the tool. In the Delete Duplicate Geometries window:
+<ul>
+<li>Select Merged as the Input layer/</li>
+<li>Run the window.</li>
+<li>Export the Cleaned output layer into the geopackage as school. Change CRS to EPSG: 23845 – DGN95 / Indonesia TM-3 zone 54.1.</li>
+</ul></li>
+<li>Count the number of schools in each Desa. This can be done using the Count points in polygon tool [Vector &gt; Analysis &gt; Count points in polygon]. In the Count points in polygon window:
+<ul>
+<li>Select the study area layer as the Polygon.</li>
+<li>Select school for Points.</li>
+<li>Under advanced options , select Do not Filter (Better Performance).</li>
+<li>Run the window.</li>
+<li>Export the Count output layer into the geopackage as school_count. Change CRS to EPSG: 23845 – DGN95 / Indonesia TM-3 zone 54.1.</li>
+</ul></li>
+<li>Create a choropleth map using the school_count layer. Double click on the school_count layer to open the Layer Properties window. Select Symbology. In the Symbology window:
+<ul>
+<li>Change from Single Symbol to Graduated.</li>
+<li>Select NUMPOINTS as the value.</li>
+<li>Select Natural Breaks (Jenks) for Mode.</li>
+<li>Click on Classify.</li>
+<li>Click on Apply and Ok.</li>
+</ul></li>
+</ul>
+<p>The choropleth map should look like this:</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image57.png" width="320" /></p>
 </div>
-<div class="layout-chunk" data-layout="l-body">
-<p><img src="img/images/image39.png" width="508" /></p>
-</div>
 <h2 id="slope">2.5 Slope</h2>
 <h3 id="deriving-slope-layer">2.5.1 Deriving slope layer</h3>
-<p>We will compute a slope layer from the DEM layer by using the Slope operation of QGIS. Bring in DEM SRTM 30M KALIMANTAN TIMUR layer into qgis. From the menu bar, select Raster -&gt; Extraction -&gt; Clip raster by extent. For Input layer, select DEM SRTM 30M KALIMANTAN TIMUR from the drop-down list. For Clipping extent, select study_area Keep the rest as default and click on the Run button.</p>
+<p>We will compute a slope layer from the DEM layer by using the Slope operation of QGIS.</p>
+<p>Bring in DEM SRTM 30M KALIMANTAN TIMUR layer into qgis.</p>
+<ul>
+<li>From the menu bar, select Raster -&gt; Extraction -&gt; Clip raster by extent.</li>
+<li>For Input layer, select DEM SRTM 30M KALIMANTAN TIMUR from the drop-down list.</li>
+<li>For Clipping extent, select study_area</li>
+<li>Keep the rest as default and click on the Run button.</li>
+</ul>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image23.png" width="938" /></p>
 </div>
-<p>Save the temporary Clipped (extent) into geopackage as elevation_30m From the menu bar, select Raster -&gt; Analysis -&gt; Slope. Slope dialog window appears. For Input layer, select elevation_30m from the drop-down list. Keep the rest of the setting as default. Click on the Run button. When the computation is completed, a temporary layer called Slope will be added in the QGIS project.</p>
+<p>Save the temporary Clipped (extent) into geopackage as elevation_30m - From the menu bar, select Raster -&gt; Analysis -&gt; Slope.</p>
+<p>Slope dialog window appears. - For Input layer, select elevation_30m from the drop-down list.</p>
+<p>Keep the rest of the setting as default. - Click on the Run button.</p>
+<p>When the computation is completed, a temporary layer called Slope will be added in the QGIS project.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image10.png" width="938" /></p>
 </div>
-<p>The legend of the Slope layer shows that the minimum and maximum values of the slope values are 0 and 70.3093 degrees respectively. The grids with darker grey indicate locations with relatively gentle slopes. On the other hand, the light grey grids indicate locations with steeper slope. Click on Close button to close Slope function dialog window.</p>
+<p>The legend of the Slope layer shows that the minimum and maximum values of the slope values are 0 and 70.3093 degrees respectively. The grids with darker grey indicate locations with relatively gentle slopes. On the other hand, the light grey grids indicate locations with steeper slope.</p>
+<ul>
+<li>Click on Close button to close Slope function dialog window.</li>
+</ul>
 <h3 id="slope-ranking">2.5.2 Slope ranking</h3>
-<p>Using steps from 2.1.4, derive slope preference data layer by scoring it with ordinal scales of choices 5-scale. Economic factor: &lt;= 5degree slope = 5, 5degree - 10degree = 4, 10degree -20degree = 3, 20degree -30degree = 2, /&gt;30degree = 1</p>
+<ul>
+<li>Using steps from 2.1.4, derive slope preference data layer by scoring it with ordinal scales of choices 5-scale.</li>
+<li>Economic factor:
+<ul>
+<li>&lt;= 5degree slope = 5,</li>
+<li>5degree - 10degree = 4,</li>
+<li>10degree -20degree = 3,</li>
+<li>20degree -30degree = 2,</li>
+<li><blockquote>
+<p>30degree = 1</p>
+</blockquote></li>
+</ul></li>
+</ul>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image38.png" width="647" /></p>
 </div>
 <h3 id="hillshade">2.5.3 Hillshade</h3>
-<p>From the menu bar, navigate to Processing -&gt; Toolbox. Search for Hillshade and double click the Hillshade under raster terrain analysis For elevation model, select elevation_30m from the dropdown list. Keep the rest of the settings as default. Click on the run button.</p>
+<ul>
+<li>From the menu bar, navigate to Processing -&gt; Toolbox. Search for Hillshade and double click the Hillshade under raster terrain analysis</li>
+<li>For elevation model, select elevation_30m from the dropdown list.</li>
+<li>Keep the rest of the settings as default.</li>
+<li>Click on the run button.</li>
+</ul>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image62.png" width="936" /></p>
 </div>
 <p>Save the temporary Hillshade layer into geopackage as Hillshade.</p>
 <h3 id="qgis2threejs">2.5.4 qgis2threejs</h3>
-<p>Open the properties of the Slope layer and navigate to Symbology. For Render type, select Singleband pseudocolor from the dropdown list For Color ramp, select Greens from the dropdown list Click Classify -&gt; apply -&gt; Ok</p>
+<ul>
+<li>Open the properties of the Slope layer and navigate to Symbology.</li>
+<li>For Render type, select Singleband pseudocolor from the dropdown list</li>
+<li>For Color ramp, select Greens from the dropdown list</li>
+<li>Click Classify -&gt; apply -&gt; Ok</li>
+</ul>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image42.png" width="564" /></p>
 </div>
@@ -2354,66 +2555,257 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image45.png" width="108" /></p>
 </div>
-<p>Select elevation_30m from the layers panel in Qgis2threejs window. From the menu bar, select Scene -&gt; Scene settings Change vertical exaggeration to 25 Click on Apply and then OK</p>
+<ul>
+<li>Select elevation_30m from the layers panel in Qgis2threejs window.</li>
+<li>From the menu bar, select Scene -&gt; Scene settings</li>
+<li>Change vertical exaggeration to 25</li>
+<li>Click on Apply and then OK</li>
+</ul>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image43.png" width="949" /></p>
 </div>
 <h2 id="healthcare">2.6 Healthcare</h2>
-<p>Click on healthcare in the layers menu to highlight the layer From the toolbar, select Open field calculator Set Output field name as POI_CODE Set the expression as 1 It should look similar to this:</p>
+<ul>
+<li>Click on healthcare in the layers menu to highlight the layer</li>
+<li>From the toolbar, select Open field calculator</li>
+<li>Set Output field name as POI_CODE</li>
+<li>Set the expression as 1</li>
+</ul>
+<p>It should look similar to this:</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image7.png" width="232" /></p>
 </div>
-<p>Click Ok Close the attributes table Right click on healthcare in the layers menu Click toggle editing to turn off editing mode Click Save From the menu bar, select Raster -&gt; Conversion -&gt; Rasterise (Vector to Raster)</p>
+<ul>
+<li>Click Ok</li>
+<li>Close the attributes table</li>
+<li>Right click on healthcare in the layers menu</li>
+<li>Click toggle editing to turn off editing mode</li>
+<li>Click Save</li>
+<li>From the menu bar, select Raster -&gt; Conversion -&gt; Rasterise (Vector to Raster)</li>
+</ul>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image50.png" width="960" /></p>
 </div>
-<p>Set Input layer as healthcare Set Field to use for a burn-in value as POI_CODE Set Output raster size units as Georeferenced units Set Width and Height as 5 metres Set Output extent as population</p>
+<ul>
+<li>Set Input layer as healthcare</li>
+<li>Set Field to use for a burn-in value as POI_CODE</li>
+<li>Set Output raster size units as Georeferenced units</li>
+<li>Set Width and Height as 5 metres</li>
+<li>Set Output extent as population</li>
+</ul>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image18.png" width="960" /></p>
 </div>
-<p>Click Run Click Close Right click on the temporary Rasterized layer and select Export -&gt; Save as Set Format as GeoPackage Set File name to IN.gpkg Set layer name to raster_healthcare Set CRS to EPSG:23845 Click Ok For the menu bar, select Raster -&gt; Analysis -&gt; Proximity (Raster Distance) Set Input layer as ras_healthcare Set Distance units as Georeferenced coordinates</p>
+<ul>
+<li>Click Run</li>
+<li>Click Close</li>
+<li>Right click on the temporary Rasterized layer and select Export -&gt; Save as</li>
+<li>Set Format as GeoPackage</li>
+<li>Set File name to IN.gpkg</li>
+<li>Set layer name to raster_healthcare</li>
+<li>Set CRS to EPSG:23845</li>
+<li>Click Ok</li>
+<li>For the menu bar, select Raster -&gt; Analysis -&gt; Proximity (Raster Distance)</li>
+<li>Set Input layer as ras_healthcare</li>
+<li>Set Distance units as Georeferenced coordinates</li>
+</ul>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image48.png" width="412" /></p>
 </div>
-<p>Click Run Click Close Right click on the temporary Proximity layer and select Export -&gt; Save as Set Format as GeoPackage Set File name to IN.gpkg Set layer name to prox_healthcare Set CRS to EPSG:23845</p>
+<ul>
+<li>Click Run</li>
+<li>Click Close</li>
+<li>Right click on the temporary Proximity layer and select Export -&gt; Save as</li>
+<li>Set Format as GeoPackage</li>
+<li>Set File name to IN.gpkg</li>
+<li>Set layer name to prox_healthcare</li>
+<li>Set CRS to EPSG:23845</li>
+</ul>
 <h2 id="forest-fire-hotspots">2.7 Forest Fire Hotspots</h2>
-<p>Click on hotspot_merged in the layers menu to highlight the layer From the toolbar, select Open field calculator Set Output field name as POI_CODE Set the expression as 1 It should look similar to this:</p>
+<ul>
+<li>Click on hotspot_merged in the layers menu to highlight the layer</li>
+<li>From the toolbar, select Open field calculator</li>
+<li>Set Output field name as POI_CODE</li>
+<li>Set the expression as 1</li>
+</ul>
+<p>It should look similar to this:</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image7.png" width="232" /></p>
 </div>
-<p>Click Ok Close the attributes table Right click on healthcare in the layers menu Click toggle editing to turn off editing mode Click Save From the menu bar, select Raster -&gt; Conversion -&gt; Rasterise (Vector to Raster) Set Input layer as hotspot_merged Set Field to use for a burn-in value as POI_CODE Set Output raster size units as Georeferenced units Set Width and Height as 5 metres Set Output extent as population Click Run Click Close Right click on the temporary Rasterized layer and select Export -&gt; Save as Set Format as GeoPackage Set File name to IN.gpkg Set layer name to ras_hotspot Set CRS to EPSG:23845 Click Ok For the menu bar, select Raster -&gt; Analysis -&gt; Proximity (Raster Distance) Set Input layer as ras_healthcare Set Distance units as Georeferenced coordinates Click Run Click Close Right click on the temporary Proximity layer and select Export -&gt; Save as Set Format as GeoPackage Set File name to IN.gpkg Set layer name to prox_hotspot Set CRS to EPSG:23845</p>
+<ul>
+<li>Click Ok</li>
+<li>Close the attributes table</li>
+<li>Right click on healthcare in the layers menu</li>
+<li>Click toggle editing to turn off editing mode</li>
+<li>Click Save</li>
+<li>From the menu bar, select Raster -&gt; Conversion -&gt; Rasterise (Vector to Raster)</li>
+<li>Set Input layer as hotspot_merged</li>
+<li>Set Field to use for a burn-in value as POI_CODE</li>
+<li>Set Output raster size units as Georeferenced units</li>
+<li>Set Width and Height as 5 metres</li>
+<li>Set Output extent as population</li>
+<li>Click Run</li>
+<li>Click Close</li>
+<li>Right click on the temporary Rasterized layer and select Export -&gt; Save as</li>
+<li>Set Format as GeoPackage</li>
+<li>Set File name to IN.gpkg</li>
+<li>Set layer name to ras_hotspot</li>
+<li>Set CRS to EPSG:23845</li>
+<li>Click Ok</li>
+<li>For the menu bar, select Raster -&gt; Analysis -&gt; Proximity (Raster Distance)</li>
+<li>Set Input layer as ras_healthcare</li>
+<li>Set Distance units as Georeferenced coordinates</li>
+<li>Click Run</li>
+<li>Click Close</li>
+<li>Right click on the temporary Proximity layer and select Export -&gt; Save as</li>
+<li>Set Format as GeoPackage</li>
+<li>Set File name to IN.gpkg</li>
+<li>Set layer name to prox_hotspot</li>
+<li>Set CRS to EPSG:23845</li>
+</ul>
 <h2 id="forest">2.8 Forest</h2>
-<p>Click on forest in the layers menu to highlight the layer From the toolbar, select Open field calculator Set Output field name as POI_CODE Set the expression as 1 It should look similar to this:</p>
+<ul>
+<li>Click on forest in the layers menu to highlight the layer</li>
+<li>From the toolbar, select Open field calculator</li>
+<li>Set Output field name as POI_CODE</li>
+<li>Set the expression as 1</li>
+</ul>
+<p>It should look similar to this:</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image7.png" width="232" /></p>
 </div>
-<p>Click Ok Close the attributes table Right click on forest in the layers menu Click toggle editing to turn off editing mode Click Save From the menu bar, select Raster -&gt; Conversion -&gt; Rasterise (Vector to Raster) Set Input layer as forest Set Field to use for a burn-in value as POI_CODE Set Output raster size units as Georeferenced units Set Width and Height as 5 metres Set Output extent as population Click Run Click Close Right click on the temporary Rasterized layer and select Export -&gt; Save as Set Format as GeoPackage Set File name to IN.gpkg Set layer name to ras_forest Set CRS to EPSG:23845 Click Ok For the menu bar, select Raster -&gt; Analysis -&gt; Proximity (Raster Distance) Set Input layer as ras_forest Set Distance units as Georeferenced coordinates Click Run Click Close Right click on the temporary Proximity layer and select Export -&gt; Save as Set Format as GeoPackage Set File name to IN.gpkg Set layer name to prox_forest Set CRS to EPSG:23845</p>
+<ul>
+<li>Click Ok</li>
+<li>Close the attributes table</li>
+<li>Right click on forest in the layers menu</li>
+<li>Click toggle editing to turn off editing mode</li>
+<li>Click Save</li>
+<li>From the menu bar, select Raster -&gt; Conversion -&gt; Rasterise (Vector to Raster)</li>
+<li>Set Input layer as forest</li>
+<li>Set Field to use for a burn-in value as POI_CODE</li>
+<li>Set Output raster size units as Georeferenced units</li>
+<li>Set Width and Height as 5 metres</li>
+<li>Set Output extent as population</li>
+<li>Click Run</li>
+<li>Click Close</li>
+<li>Right click on the temporary Rasterized layer and select Export -&gt; Save as</li>
+<li>Set Format as GeoPackage</li>
+<li>Set File name to IN.gpkg</li>
+<li>Set layer name to ras_forest</li>
+<li>Set CRS to EPSG:23845</li>
+<li>Click Ok</li>
+<li>For the menu bar, select Raster -&gt; Analysis -&gt; Proximity (Raster Distance)</li>
+<li>Set Input layer as ras_forest</li>
+<li>Set Distance units as Georeferenced coordinates</li>
+<li>Click Run</li>
+<li>Click Close</li>
+<li>Right click on the temporary Proximity layer and select Export -&gt; Save as</li>
+<li>Set Format as GeoPackage</li>
+<li>Set File name to IN.gpkg</li>
+<li>Set layer name to prox_forest</li>
+<li>Set CRS to EPSG:23845</li>
+</ul>
 <h2 id="water-body">2.8 Water Body</h2>
-<p>Click on waterbody in the layers menu to highlight the layer From the toolbar, select Open field calculator Set Output field name as POI_CODE Set the expression as 1 It should look similar to this:</p>
+<ul>
+<li>Click on waterbody in the layers menu to highlight the layer</li>
+<li>From the toolbar, select Open field calculator</li>
+<li>Set Output field name as POI_CODE</li>
+<li>Set the expression as 1</li>
+<li>It should look similar to this:</li>
+</ul>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image7.png" width="232" /></p>
 </div>
-<p>Click Ok Close the attributes table Right click on forest in the layers menu Click toggle editing to turn off editing mode Click Save From the menu bar, select Raster -&gt; Conversion -&gt; Rasterise (Vector to Raster) Set Input layer as waterbody Set Field to use for a burn-in value as POI_CODE Set Output raster size units as Georeferenced units Set Width and Height as 5 metres Set Output extent as population Click Run Click Close Right click on the temporary Rasterized layer and select Export -&gt; Save as Set Format as GeoPackage Set File name to IN.gpkg Set layer name to ras_waterbody Set CRS to EPSG:23845 Click Ok For the menu bar, select Raster -&gt; Analysis -&gt; Proximity (Raster Distance) Set Input layer as ras_waterbody Set Distance units as Georeferenced coordinates Click Run Click Close Right click on the temporary Proximity layer and select Export -&gt; Save as Set Format as GeoPackage Set File name to IN.gpkg Set layer name to prox_waterbody Set CRS to EPSG:23845</p>
+<ul>
+<li>Click Ok</li>
+<li>Close the attributes table</li>
+<li>Right click on forest in the layers menu</li>
+<li>Click toggle editing to turn off editing mode</li>
+<li>Click Save</li>
+<li>From the menu bar, select Raster -&gt; Conversion -&gt; Rasterise (Vector to Raster)</li>
+<li>Set Input layer as waterbody</li>
+<li>Set Field to use for a burn-in value as POI_CODE</li>
+<li>Set Output raster size units as Georeferenced units</li>
+<li>Set Width and Height as 5 metres</li>
+<li>Set Output extent as population</li>
+<li>Click Run</li>
+<li>Click Close</li>
+<li>Right click on the temporary Rasterized layer and select Export -&gt; Save as</li>
+<li>Set Format as GeoPackage</li>
+<li>Set File name to IN.gpkg</li>
+<li>Set layer name to ras_waterbody</li>
+<li>Set CRS to EPSG:23845</li>
+<li>Click Ok</li>
+<li>For the menu bar, select Raster -&gt; Analysis -&gt; Proximity (Raster Distance)</li>
+<li>Set Input layer as ras_waterbody</li>
+<li>Set Distance units as Georeferenced coordinates</li>
+<li>Click Run</li>
+<li>Click Close</li>
+<li>Right click on the temporary Proximity layer and select Export -&gt; Save as</li>
+<li>Set Format as GeoPackage</li>
+<li>Set File name to IN.gpkg</li>
+<li>Set layer name to prox_waterbody</li>
+<li>Set CRS to EPSG:23845</li>
+</ul>
 <h1 id="choropleth-maps">3.0 Choropleth Maps</h1>
 <h2 id="working-population">3.1 Working Population</h2>
-<p>Before drawing the map, we have to create a new column for the working population. Right click study_area in layers menu From the Attributes Toolbar, select Open Field Calculator Set Output field name as working age Write the expression as follows:</p>
+<p>Before drawing the map, we have to create a new column for the working population.</p>
+<ul>
+<li>Right click study_area in layers menu</li>
+<li>From the Attributes Toolbar, select Open Field Calculator</li>
+<li>Set Output field name as working age</li>
+<li>Write the expression as follows:</li>
+</ul>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image26.png" width="226" /></p>
 </div>
-<p>Click Ok Close the field calculator by clicking the cross button on the top right corner Click toggle editing to turn off editing mode Click Save A new column, working age, is added to the attribute table. Now that we have the necessary columns, we can draw the choropleth map. Right click on study_area Click Properties Click Symbology from the left Select Graduated from the drop down For Value, select working age from the drop down Set Color Ramp as Blues Set mode as Natural Breaks (Jenks). This is to ensure that the values in each bin do not vary too much.</p>
+<ul>
+<li>Click Ok</li>
+<li>Close the field calculator by clicking the cross button on the top right corner</li>
+<li>Click toggle editing to turn off editing mode</li>
+<li>Click Save</li>
+</ul>
+<p>A new column, working age, is added to the attribute table. Now that we have the necessary columns, we can draw the choropleth map.</p>
+<ul>
+<li>Right click on study_area</li>
+<li>Click Properties</li>
+<li>Click Symbology from the left</li>
+<li>Select Graduated from the drop down</li>
+<li>For Value, select working age from the drop down</li>
+<li>Set Color Ramp as Blues</li>
+<li>Set mode as Natural Breaks (Jenks). This is to ensure that the values in each bin do not vary too much.</li>
+</ul>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image21.png" width="359" /></p>
 </div>
-<p>Click on Classify Click on Apply Click on OK</p>
+<ul>
+<li>Click on Classify</li>
+<li>Click on Apply</li>
+<li>Click on OK</li>
+</ul>
 <h2 id="religion">3.2 Religion</h2>
 <h2 id="muslim">3.2.1 Muslim</h2>
-<p>Using the steps from 3.1, draw a choropleth map. There is no need to open the field calculator as the necessary columns are already present. For Value, select the expression buttopm, , next to the drop down box Type “SILAM”/“JUMLAH_PEN” into the expression panel Click Ok</p>
+<p>Using the steps from 3.1, draw a choropleth map. There is no need to open the field calculator as the necessary columns are already present. - For Value, select the expression buttopm, , next to the drop down box - Type “SILAM”/“JUMLAH_PEN” into the expression panel - Click Ok</p>
 <h3 id="christian">3.2.2 Christian</h3>
 <p>Using the steps from 3.2.1, draw a choropleth map using “KRISTEN” /“JUMLAH_PEN” as the Value</p>
 <h2 id="gender">3.3 Gender</h2>
 <p>Using the steps from 3.2.1, draw a choropleth map using “PRIA” /“JUMLAH_PEN” as the Value</p>
 <h2 id="settlements-heatmap">3.4 Settlements Heatmap</h2>
-<p>Bring in gis_osm_places_free_1.shp into qgis. From the menu bar, click vector -&gt; research tools -&gt; Select by location For Input, select gis_osm_places_free_1.shp Intersect should be selected For By comparing the features from, select study_area. Under advanced options , select Do not Filter (Better Performance) Click Run Save the temporary layer into geopackage as settlements From the menu bar, navigate to Processing -&gt; Toolbox. Search for heatmap and double click the Heatmap (Kernel Density Estimation) under Interpolation. For Input Point layer, select settlements from the drop-down list. For Radius, change to 20000. For Pixel size X and Pixel size Y, change to 50. Keep the rest of the settings as default. Click on the Run button.</p>
+<ul>
+<li>Bring in gis_osm_places_free_1.shp into qgis.</li>
+<li>From the menu bar, click vector -&gt; research tools -&gt; Select by location</li>
+<li>For Input, select gis_osm_places_free_1.shp</li>
+<li>Intersect should be selected</li>
+<li>For By comparing the features from, select study_area. Under advanced options , select Do not Filter (Better Performance)</li>
+<li>Click Run</li>
+<li>Save the temporary layer into geopackage as settlements</li>
+<li>From the menu bar, navigate to Processing -&gt; Toolbox. Search for heatmap and double click the Heatmap (Kernel Density Estimation) under Interpolation.</li>
+<li>For Input Point layer, select settlements from the drop-down list.</li>
+<li>For Radius, change to 20000.</li>
+<li>For Pixel size X and Pixel size Y, change to 50.</li>
+<li>Keep the rest of the settings as default.</li>
+<li>Click on the Run button.</li>
+</ul>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image14.png" width="320" /></p>
 </div>
@@ -2422,56 +2814,112 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 <p>Save the temporary Heatmap layer into geopackage as settlements_heatmap.</p>
 <h2 id="forest-fire-hotspot-heatmap">3.5 Forest Fire Hotspot Heatmap</h2>
-<p>Select the hotspot_merged layer From the menu bar, navigate to Processing -&gt; Toolbox. Search for heatmap and double click the Heatmap (Kernel Density Estimation) under Interpolation. For Input Point layer, select settlements from the drop-down list. For Radius, change to 20000. For Pixel size X and Pixel size Y, change to 50. Keep the rest of the settings as default. Click on the Run button. Save the temporary Heatmap layer into geopackage as hotspot_heatmap.</p>
+<ul>
+<li>Select the hotspot_merged layer</li>
+<li>From the menu bar, navigate to Processing -&gt; Toolbox. Search for heatmap and double click the Heatmap (Kernel Density Estimation) under Interpolation.</li>
+<li>For Input Point layer, select settlements from the drop-down list.</li>
+<li>For Radius, change to 20000.</li>
+<li>For Pixel size X and Pixel size Y, change to 50.</li>
+<li>Keep the rest of the settings as default.</li>
+<li>Click on the Run button.</li>
+<li>Save the temporary Heatmap layer into geopackage as hotspot_heatmap.</li>
+</ul>
 <h2 id="education-choropleth-map">3.6 Education Choropleth Map</h2>
-<p>From the menu bar, navigate to Vector -&gt; Analysis Tool -&gt; Count Points in Polygon. For Input Polygon layer, select study_area. For Input Points layer, select schools Run the window. A temporary layer Count would be created. Saved the temporary layer into geopackage as school_count. Right click on school_count Click Properties Click Symbology from the left Select Graduated from the drop down For Value, select NUMPOINTS from the drop down Set Color Ramp as Blues Set mode as Natural Breaks (Jenks). This is to ensure that the values in each bin do not vary too much. Click on Classify Click on Apply Click on OK</p>
+<ul>
+<li>From the menu bar, navigate to Vector -&gt; Analysis Tool -&gt; Count Points in Polygon.</li>
+<li>For Input Polygon layer, select study_area.</li>
+<li>For Input Points layer, select schools</li>
+<li>Run the window.</li>
+<li>A temporary layer Count would be created. Saved the temporary layer into geopackage as school_count.</li>
+<li>Right click on school_count</li>
+<li>Click Properties</li>
+<li>Click Symbology from the left</li>
+<li>Select Graduated from the drop down</li>
+<li>For Value, select NUMPOINTS from the drop down</li>
+<li>Set Color Ramp as Blues</li>
+<li>Set mode as Natural Breaks (Jenks). This is to ensure that the values in each bin do not vary too much.</li>
+<li>Click on Classify</li>
+<li>Click on Apply</li>
+<li>Click on OK</li>
+</ul>
 <h1 id="site-suitability">4.0 Site Suitability</h1>
 <p>Download the AHP Template. Open the Excel template and perform AHP analysis. This is our AHP score that we come up with.</p>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="img/images/image51.png" width="557" /></p>
+<p><img src="img/images/image201.png" width="628" /></p>
 </div>
 <p>This is our AHP score.</p>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="img/images/image32.png" width="214" /></p>
+<p><img src="img/images/image202.png" width="302" /></p>
 </div>
 <p>From the above results, health risk factor poses the most critical factor and economic factor being the least weighted factor in determining the suitable site. The consistency check of 4% is below 10% and the inconsistency is acceptable.</p>
 <h2 id="prepare-a-composite-accessibility-layer">4. 1 Prepare a composite accessibility layer</h2>
-<p>From the menu bar, navigate to Processing -&gt; Toolbox. Search for raster calculator and double click the raster calculator under raster analysis Copy and paste the code below into the Expression box. “(1-(”<a href="mailto:Slope@1" class="email">Slope@1</a>“/70.30928))<em>0.033+(1-("<a href="mailto:prox_transport@1" class="email">prox_transport@1</a>"-562.249939)/(100132.03125-562.249939))</em>0.053+(”<a href="mailto:prox_hotspot@1" class="email">prox_hotspot@1</a>“/88631.007812)<em>0.166+("<a href="mailto:forest_prox@1" class="email">forest_prox@1</a>"/86003.609375)</em>0.23+(1-(”<a href="mailto:raster_road_prox@1" class="email">raster_road_prox@1</a>“/86038.75))<em>0.086+("<a href="mailto:waterbody_prox@1" class="email">waterbody_prox@1</a>"/87802.921875)</em>0.432”</p>
+<ul>
+<li>From the menu bar, navigate to Processing -&gt; Toolbox. Search for raster calculator and double click the raster calculator under raster analysis</li>
+<li>Copy and paste the code below into the Expression box.</li>
+</ul>
+<p>(1-(“Slope@1”/70.30928))*0.033+(1-(“prox_transport@1”-562.249939)/(100132.03125-562.249939))*0.053+(“prox_hotspot@1”/88631.007812)*0.166+(“forest_prox@1”/86003.609375)*0.23+(1-(“raster_road_prox@1”/86038.75))*0.086+(“waterbody_prox@1”/87802.921875)*0.432</p>
 <p>Noticed that we used 1 - z-score of slope, transport and road as we want higher z-score to represent better site suitability.</p>
-<p>For referenced layer use prox_building. Click run. Save the composite layer into geopackage as composite_layer</p>
+<ul>
+<li>For referenced layer use prox_building.</li>
+<li>Click run.</li>
+<li>Save the composite layer into geopackage as composite_layer</li>
+</ul>
 <h2 id="identify-suitable-sites">4.2 Identify suitable sites</h2>
 <p>We now need to identify a suitable area based on the composite accessibility layer that we have obtained. The scale of the composite accessibility layer ranges from 0.155585 to 0.690181. After investigating the various values to determine the best value to identify the composite factor score, we have decided on 0.3 to better pinpoint the ideal location.</p>
-<p>In order to derive the site suitability layer, the reclassifying operation of raster GIS will be used. In QGIS, raster reclassifying can be performed by using the Reclassify by Table function. From the Processing Toolbox, search for Reclassify by Table, double-click on it.</p>
+<p>In order to derive the site suitability layer, the reclassifying operation of raster GIS will be used. In QGIS, raster reclassifying can be performed by using the Reclassify by Table function.</p>
+<ul>
+<li>From the Processing Toolbox, search for Reclassify by Table, double-click on it.</li>
+</ul>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image104.png" width="506" /></p>
 </div>
-<p>The dialog window of Reclassify by Table appears. For Raster Layer, select composite_layer from the drop-down list. For the Reclassification table, click on the icon. The dialog window of the Fixed table appears. Enter the value similar to the screenshot below.</p>
+<p>The dialog window of Reclassify by Table appears. - For Raster Layer, select composite_layer from the drop-down list. - For the Reclassification table, click on the icon.</p>
+<p>The dialog window of the Fixed table appears. - Enter the value similar to the screenshot below.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image31.png" width="492" /></p>
 </div>
-<p>Click on Add Row button when you want to add a new row. Click on OK button when you have completed the entry. For Range boundaries, select min &lt;= value &lt; max. For Output data type, select Float32 from the drop-down list. Lastly, click on Run button to run the process. The temporary layer should look like this.</p>
+<ul>
+<li>Click on Add Row button when you want to add a new row.</li>
+<li>Click on OK button when you have completed the entry.</li>
+<li>For Range boundaries, select min &lt;= value &lt; max.</li>
+<li>For Output data type, select Float32 from the drop-down list.</li>
+<li>Lastly, click on Run button to run the process.</li>
+</ul>
+<p>The temporary layer should look like this.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image46.png" width="230" /></p>
 </div>
-<p>Clip the temporary layer into the study area. The study area should be a dissolved polygon. Open the Dissolve window by clicking Vector -&gt; Geoprocessing -&gt; Dissolve. In the Dissolve window, select study_area.</p>
+<p>Clip the temporary layer into the study area. - The study area should be a dissolved polygon. Open the Dissolve window by clicking Vector -&gt; Geoprocessing -&gt; Dissolve. - In the Dissolve window, select study_area.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image12.png" width="498" /></p>
 </div>
-<p>Run the window. Save the temporary layer as study_area_dissolved. Open the Clip Raster by masked extent window by Raster -&gt; Extraction -&gt; Clip Raster by Masked Extent. Select the temporary layer as in Input layer. Select study_area_dissolved as the masked layer. Select EPSG:23845 - DGN95 / Indonesia TM-3 zone 54.1 as the Source CRS and Target CRS. Run the window. The temporary layer should look like the following</p>
+<ul>
+<li>Run the window.</li>
+<li>Save the temporary layer as study_area_dissolved.</li>
+<li>Open the Clip Raster by masked extent window by Raster -&gt; Extraction -&gt; Clip Raster by Masked Extent.</li>
+<li>Select the temporary layer as in Input layer.</li>
+<li>Select study_area_dissolved as the masked layer.</li>
+<li>Select EPSG:23845 - DGN95 / Indonesia TM-3 zone 54.1 as the Source CRS and Target CRS.</li>
+<li>Run the window.</li>
+</ul>
+<p>The temporary layer should look like the following</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image47.png" width="196" /></p>
 </div>
 <p>Save the temporary layer into geopackage as suitability</p>
 <h2 id="vectorise-suitable-sites">4.3 Vectorise suitable sites</h2>
-<p>Next, we will convert the suitable site identified above from raster into vector through vectorisation. From the menu bar, select Raster -&gt; Conversion -&gt; Polygonize(Raster to Vector) The Polygonize (Raster to Vector) dialog window appears. For Input Layer, select suitability from the drop-down list. For Name of the field to create, type Sites. Keep the checkbox in front of Use 8-connectedness uncheck.</p>
+<p>Next, we will convert the suitable site identified above from raster into vector through vectorisation. - From the menu bar, select Raster -&gt; Conversion -&gt; Polygonize(Raster to Vector)</p>
+<p>The Polygonize (Raster to Vector) dialog window appears. - For Input Layer, select suitability from the drop-down list. - For Name of the field to create, type Sites. - Keep the checkbox in front of Use 8-connectedness uncheck.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image24.png" width="635" /></p>
 </div>
-<p>When you are ready, click on the Run button. When the computation is completed, a new temporary layer called Vectorized will be added on the Layers panel and display on the view window.</p>
+<ul>
+<li>When you are ready, click on the Run button. When the computation is completed, a new temporary layer called Vectorized will be added on the Layers panel and display on the view window.</li>
+</ul>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image59.png" width="217" /></p>
 </div>
-<p>We would only like to save the areas which are suitable (which we previously labelled as ‘1’). Use the Select by expression tool Enter the following expression in the expression box - “Sites” = 1 Save the selected area into geopackage as suitability_vector. Your screen should look similar to the screenshot below.</p>
+<p>We would only like to save the areas which are suitable (which we previously labelled as ‘1’). - Use the Select by expression tool - Enter the following expression in the expression box - “Sites” = 1 - Save the selected area into geopackage as suitability_vector. Your screen should look similar to the screenshot below.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="img/images/image55.png" width="246" /></p>
 </div>
