@@ -68,6 +68,12 @@ We will do a **site suitability analysis** of the study area above whereby the m
 
 + [Buildings and Settlements](https://www.indonesia-geospasial.com/2020/12/download-shp-pemukiman-detail-seluruh.html).
 
++ [Forest](https://www.indonesia-geospasial.com/2020/09/download-shp-tutupan-lahan-tahun-2019.html).
+
++ [Healthcare facilities](https://data.humdata.org/dataset/hotosm_idn_sumatra_health_facilities).
+
++ [OSM Kalimantan](https://download.geofabrik.de/asia/indonesia/kalimantan.html).
+
 # 4.0 Scope of work
 
 - Project Timeline Setup
