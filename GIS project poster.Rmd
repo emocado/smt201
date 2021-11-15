@@ -1,0 +1,97 @@
+---
+title: Dimana Itu
+poster_height: "33.11in"
+poster_width: "23.39in"
+font_family: "Helvetica"
+author:
+  - name: Khoo Chloe
+    affil: 1
+  - name: Lee Wei Khiang
+    affil: 1
+  - name: Richie Chua
+    affil: 1
+affiliation:
+  - num: 1
+    address: School of Computer Science and Information Systems, Singapore Management University
+body_textsize: "29px"
+column_numbers: 2
+primary_colour: "#E2C044"
+output: 
+  posterdown::posterdown_html:
+    self_contained: false
+bibliography: packages.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Problem
+
+Indonesia has planned to relocate their capital from Jakarta to Kalimantan on the island of Borneo in response to the considerable sociological issues, pollution, traffic, climate change risks, and political influences.
+
+This move is estimated to cost nearly \$33 billion (US), thus it is imperative to evaluate the site for relocation is suitable and sustainable.
+
+### Project Objectives
+
+1.  Analyse **Kutai Kartanegara Regency** and **Penajam North Paser Regency** in East Kalimantan in terms of the following: Population and demographic, Economic and Businesses, Transport and Communication, Infrastructure, and Environment and Hazard
+
+2.  Conduct a **site suitability analysis** of the study area below whereby we identify the suitable areas for relocation
+
+    -   selected districts and sub-districts of **North Penajam Paser**
+
+    -   selected districts and sub-districts **Kutai Kartanegara**
+
+        ```{r, echo=FALSE,fig.cap="study area", fig.align='center'}
+        knitr::include_graphics("img/study area.png")
+        ```
+
+# Motivation
+
+The capital of a country is arguably the most important city due to its economic, social, and political significance. Hence, choosing the right area to relocate the capital requires in depth analysis. Our team hopes to shed some GIS insights on the landscape of Indonesia and highlight suitable areas for the relocation.
+
+# Approach
+
+1.  Identifed 7 criteria for site selection: proximity to natural disaster hotspots, natural forests, forest fire hotspots, roads, air and seaports, slope, and current urban settlements
+
+2.  Extracted GIS layers describing these factors across our study area
+
+3.  Conducted raster proximity analyses on these layers (not including urban settlements)
+
+4.  Ranked these factors on a scale of 1 to 5 where one is the least suitable and 5 is the most suitable for the capital to relocate
+
+5.  Standardized the proximity layers with our AHP suitability rankings
+
+    ```{r, echo=FALSE,fig.align='center'}
+    knitr::include_graphics("img/AHP_ranking.png")
+    ```
+
+6.  Selected areas with composite score \> 0.3 as this gives us a result without too many or excessively large areas
+
+7.  Plotted a heatmap to describe the distribution of urban settlements in our study area
+
+8.  Suitable areas should be near, but not on current urban settlements
+
+# Result
+
+```{r, echo=FALSE,fig.align='center'}
+knitr::include_graphics(c("img/1.png"))
+```
+
+```{r, echo=FALSE,fig.show='hold',fig.align='center'}
+knitr::include_graphics(c("img/2.png"))
+```
+
+```{r, echo=FALSE,fig.show='hold',fig.align='center'}
+knitr::include_graphics(c("img/3.png"))
+```
+
+```{r, echo=FALSE,fig.cap="GIS maps of the 7 criteria and the suitability map",fig.show='hold',fig.align='center'}
+knitr::include_graphics(c("img/4.png"))
+```
+
+# Future Works
+
+1.  We did not consider all our factors in our AHP analysis, such as proximity to urban settlements and indigineous tribes. Given the opportunity we would love to further analyse the study areas based off of more factors
+2.  Our project only focused on a few selected areas and there could be more viable options outside of our study area
+3.  Our project focused on 2D modelling of the study area. More insights could be obtained from a 3D modelling of the area
