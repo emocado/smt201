@@ -7,8 +7,6 @@ navbar:
   left:
     - text: "Proposal"
       href: proposal.html
-    - text: "Data Preparation"
-      href: data_preparation.html
     - text: "Report of Survey"
       href: report_of_survey.html
     - text: "Site Selection Report"
