@@ -3,6 +3,12 @@ title: "Welcome to SMT201 G1T11"
 description: |
   Welcome to our new blog, SMT201 G1T11. We hope you enjoy 
   reading what we have to say!
+  Our Github repo:
+  [Github](https://github.com/emocado/smt201)
+  
+  Our Report:
+  [G1T11 Report](https://docs.google.com/document/d/1lxkAXrnp_0S8d9ZUaASS8VvPfwavzNMWmezzmD3KNeo/edit?usp=sharing)
+
 author:
   - name: Lee Wei Khiang
     url: https://www.linkedin.com/in/wei-khiang-lee/
@@ -25,10 +31,6 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 
-# Learn more about creating blogs with Distill at:
-# https://rstudio.github.io/distill/blog.html
-
 ```
-
 
 

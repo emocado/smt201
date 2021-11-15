@@ -2,7 +2,7 @@
   {
     "path": "posts/welcome/",
     "title": "Welcome to SMT201 G1T11",
-    "description": "Welcome to our new blog, SMT201 G1T11. We hope you enjoy \nreading what we have to say!",
+    "description": "Welcome to our new blog, SMT201 G1T11. We hope you enjoy \nreading what we have to say!\nOur Github repo:\n[Github](https://github.com/emocado/smt201)\n\nOur Report:\n[G1T11 Report](https://docs.google.com/document/d/1lxkAXrnp_0S8d9ZUaASS8VvPfwavzNMWmezzmD3KNeo/edit?usp=sharing)",
     "author": [
       {
         "name": "Lee Wei Khiang",
@@ -21,7 +21,7 @@
     "categories": [],
     "contents": "\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2021-10-21T17:30:04+08:00",
+    "last_modified": "2021-11-15T22:34:18+08:00",
     "input_file": {}
   }
 ]

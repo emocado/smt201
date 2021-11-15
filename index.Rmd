@@ -1,5 +1,25 @@
 ---
-title: "SMT201 g1t11"
+title: "Welcome to SMT201 G1T11"
 site: distill::distill_website
-listing: posts
+description: |
+  Welcome to our new blog, SMT201 G1T11. We hope you enjoy 
+  reading what we have to say!
+author:
+  - name: Lee Wei Khiang
+    url: https://www.linkedin.com/in/wei-khiang-lee/
+    affiliation: School of Computing and Information Systems, Singapore Management University
+    affiliation_url: https://scis.smu.edu.sg/
+  - name: Richie Chua
+    url: https://www.linkedin.com/in/richiechua/
+    affiliation: School of Computing and Information Systems, Singapore Management University
+    affiliation_url: https://scis.smu.edu.sg/
+  - name: Chloe Khoo
+    url: https://www.linkedin.com/in/chloe-khoo/
+    affiliation: School of Computing and Information Systems, Singapore Management University
+    affiliation_url: https://scis.smu.edu.sg/
 ---
+Our Github repo:
+[Github](https://github.com/emocado/smt201)
+
+Our Report:
+[G1T11 Report](https://docs.google.com/document/d/1lxkAXrnp_0S8d9ZUaASS8VvPfwavzNMWmezzmD3KNeo/edit?usp=sharing)
